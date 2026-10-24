@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>DeepSeek 快捷提问</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">DS</span>
+      <span class="title">DeepSeek 快捷提问</span>
+    </div>
+    <div class="actions">
+      <button id="btn-new" class="icon-btn" title="新对话">＋</button>
+      <button id="btn-open" class="icon-btn" title="打开 DeepSeek 网页">↗</button>
+    </div>
+  </header>
+
+  <div id="banner" class="banner hidden"></div>
+
+  <main id="chat"></main>
+
+  <footer>
+    <div class="status-row">
+      <span id="conn" class="conn"><i class="dot"></i><span id="conn-text">连接中…</span></span>
+      <button id="btn-attach" class="icon-btn small" title="添加图片（也可直接 Ctrl+V 粘贴截图）">🖼</button>
+    </div>
+    <div id="attachments" class="attachments hidden"></div>
+    <div class="input-row">
+      <textarea id="input" rows="2" placeholder="输入问题，Enter 发送，Shift+Enter 换行（可直接粘贴截图）"></textarea>
+      <div class="btn-col">
+        <button id="btn-send" class="send-btn" title="发送">发送</button>
+        <button id="btn-stop" class="stop-btn hidden" title="停止生成">停止</button>
+      </div>
+    </div>
+    <input id="file-input" type="file" accept="image/*" multiple hidden>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
